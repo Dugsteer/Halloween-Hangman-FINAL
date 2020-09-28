@@ -619,7 +619,7 @@ h1 {
 
 .letter {
   position: absolute;
-  right: 18px;
+  right: 15px;
   top: 350px;
   font-size: 7rem;
   font-family: 'Headhunter';
@@ -647,7 +647,7 @@ text:focus {
 #letterInput {
   position: absolute;
   left: 700px;
-  top: 440px;
+  top: 442px;
   font-size: 4rem;
   font-family: 'Creepster';
   width: 100px;
@@ -818,7 +818,7 @@ text:focus {
   grid-row: 3/4;
   grid-column: 2/3;
   width: 700px;
-  height: 400px;
+  height: 430px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -876,7 +876,8 @@ text:focus {
   color: #e8e4c9;
   padding: 1.5rem 0;
   height: 7rem;
-  background-color: #120437; }
+  background-color: #120437;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 75em) {
     .footer {
       width: 100vw; } }

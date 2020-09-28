@@ -12,6 +12,7 @@
   padding: 1.5rem 0;
   height: 7rem;
   background-color: $color-halloween;
+  box-shadow: $box-shadow-large;
 
   @media only screen and (max-width: $bp-largest){
     width: 100vw;
