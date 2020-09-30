@@ -14,7 +14,7 @@
   box-shadow: $box-shadow-small;
 
   @media only screen and (max-width: $bp-large) {
-    width: 600px;
+    width: 700px;
     height: 400px;
   }
   @media only screen and (max-width: $bp-small) {
@@ -41,6 +41,10 @@
     margin-bottom: 2rem;
     border-radius: 3px;
     box-shadow: $box-shadow-large;
+
+    &:hover{
+      transform: scaleY(-1);
+    }
 
     @media only screen and (max-width: $bp-large) {
       width: 160px;
@@ -84,4 +88,42 @@
 
 .card {
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
+}
+
+#imageCard{
+  opacity: 1;
+}
+
+.jiggle {
+ animation: jiggler 1s infinite;
+}
+
+
+
+@keyframes jiggler {
+   0% {
+       left: 253px;
+       top: 48px;
+       transform: rotate(-1deg);
+      
+   }
+   20% {
+    opacity: .8;
+       left: 257px;
+       top: 47px;
+       transform: rotate(2deg);
+      
+   }
+   64% {
+       left: 253px;
+       top: 46px;
+       transform: rotate(-19deg);
+       opacity: .4;
+   }
+   80% {
+       left: 257px;
+       top: 51px;
+       transform: rotate(-21deg);
+       opacity: .2;
+   }
 }

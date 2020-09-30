@@ -1,4 +1,47 @@
 // PREVENT MENU FROM APPEARING ON SMALL SCREENS ON LOAD
+const jiggly = document.getElementById('imageCard');
+const globo = document.getElementById('balloon');
+const easterEgg = new Audio('../sounds/no2.wav');
+
+
+
+
+
+
+function removeBalloon(){
+  globo.classList.remove('floatMe');
+  easterEgg.pause();
+}
+
+function balloonMe(){
+  globo.classList.add('floatMe');
+  easterEgg.play();
+  setTimeout(removeBalloon, 5000);
+}
+
+
+
+//Jiggle the imagecard
+
+setInterval(jiggleMe, 5000);
+
+jiggleMe();
+ jiggleYou();
+
+function jiggleMe(){
+  setTimeout(jiggleYou, 500);
+ 
+}
+
+function removeJiggle(){
+  jiggly.classList.remove('jiggle');
+}
+
+function jiggleYou(){
+  jiggly.classList.add('jiggle');
+  setTimeout(removeJiggle, 2000);
+}
+
 
 const menu = document.getElementById("menu");
 const sidey = document.getElementById("conto");
@@ -29,7 +72,12 @@ function startLoader(){
 
 setTimeout(stopLoader, 500);
 
+//check for top of window
+function checkForTop (){
+  loader.style.top = (window.pageYOffset) + "px";
+}
 
+checkForTop();
 // CONST items from the DOM
 const inputWord = document.getElementById('word');
 const underscore = document.getElementById('underScore');
@@ -64,8 +112,8 @@ let check = true;
 let good = [];
 
 const evilWords = ['witch', 'ghost', 'pumpkin', 'trick', 'treat', 'bat', 'cauldron', 'skeleton', 'broomstick', 'clown', 'black', 'cat', 'bones', 'candy', 'candle', 'coffin', 'tomb', 'werewolf', 'vampire','creepy', 'scary', 'haunted', 'disguise', 'fangs', 'mummy', 'Frankenstein', 'monster', 'grave', 'skull', 'horror', 'magic', 'moon', 'nightmare', 'shadow', 'spell', 'spider', 'web', 'wizard', 'zombie'];
-tombArray = ['tomb1', 'tomb2', 'tomb3', 'tomb4', 'tomb5', 'tomb6', 'tomb7', 'tomb8'];
-ghostArray = ['spirit1', 'spirit2', 'spirit3', 'spirit4', 'spirit5', 'spirit6', 'spirit7', 'spirit8'];
+const tombArray = ['tomb1', 'tomb2', 'tomb3', 'tomb4', 'tomb5', 'tomb6', 'tomb7', 'tomb8'];
+const ghostArray = ['spirit1', 'spirit2', 'spirit3', 'spirit4', 'spirit5', 'spirit6', 'spirit7', 'spirit8'];
 
 //Select a random word from the list.
 const evilWord = evilWords[Math.floor(Math.random() * evilWords.length)];
@@ -169,7 +217,7 @@ function addLetter() {
     } else if (!usedLettersArray.includes(v) &&!secretArray.includes(v) && letter.value.match(/[a-z]/i)) {
             usedLettersArray.push(v);
             tombStoneVanish();
-        joinedAlphabet = usedLettersArray.join(" ");
+        let joinedAlphabet = usedLettersArray.join(" ");
         alphaWords.textContent = joinedAlphabet;
     };
     letter.value="";

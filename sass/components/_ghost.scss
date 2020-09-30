@@ -1,11 +1,14 @@
 .loader-div {
   background-color: $color-halloween-background;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   height: 100vh;
   width: 1200px;
   margin: auto;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
   z-index: 1000;

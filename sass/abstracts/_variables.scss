@@ -1,6 +1,6 @@
 // COLORS 
 
-$color-blue: #368cbf;
+$color-blue: rgb(35, 9, 105);
 $color-blue-dark: #2B6498;
 $color-green: #7ebc59;
 $color-green-dark: #70A950;
@@ -15,11 +15,12 @@ $color-white: #fff;
 $color-black: #000;
 
 $color-black: #000;
-$color-halloween: rgb(18, 4,55);
+$color-halloween: rgb(17, 3, 56);
 $color-halloween-white: #e8e4c9;
 $color-halloween-orange: #F75F1C;
 $color-halloween-green:  #FF9A00;
 $color-halloween-background: #594f73;
+$color-halloween-text: rgb(18, 4,55);
 
 // FONT
 $default-font-size: 1.6rem;
@@ -33,4 +34,5 @@ $bp-largest: 75em;   // 1200px
 $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px;
 $bp-small: 37.5em;    // 600px;
-$bp-smallest: 30em;
+$bp-smallest: 28em;
+$bp-teeny: 28em;
