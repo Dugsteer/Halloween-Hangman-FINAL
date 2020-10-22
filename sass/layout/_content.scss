@@ -10,7 +10,7 @@
     position: relative;
     background-image: url("../img/halloween-bg2.jpg");
     background-size: cover;
-    margin-top: 4rem;
+    margin: 2rem 0;
     padding: 0;
     width: 800px;
     height: 600px;
@@ -94,10 +94,6 @@
     h1 {
         padding: none;
         margin: none;
-
-        @media only screen and(max-width: $bp-smallest){
-            display: none;
-        }
     }
     
     .title {

@@ -2,13 +2,13 @@
     grid-row: 3/4;
     grid-column: 2/3;
     width: 700px;
-    height: 480px;
+    height: auto;
     display: flex;
     flex-direction:column;
     align-items: space-between;
     justify-self: center;
     text-align: center;
-    margin: 4rem 0;
+    margin: 2rem 0;
     padding: 2rem 0rem;
     background-color: $color-halloween-white;
     justify-content: flex-start;
@@ -16,26 +16,14 @@
 
     @media only screen and (max-width:$bp-large){
         width: 700px;
-        height: 400px;
-        
        }
     @media only screen and (max-width:$bp-small){
         justify-content: center;
         width: 400px;
-        height: 700px;
-        
        }
     @media only screen and (max-width:$bp-smallest){
         justify-content: center;
-        width: 350px;
-        height: 670px;
-        
-       }
-    @media only screen and (max-width:$bp-teeny){
-        justify-content: center;
-        width: 330px;
-        height: 670px;
-        
+        width: 350px;  
        }
 
 &__text {

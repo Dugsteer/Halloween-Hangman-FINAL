@@ -57,6 +57,9 @@ function toggler() {
   sidey.classList.toggle("block");
 }
 
+// Show and hide about info
+function show(){info.classList.toggle('xxc');};
+function unshow(){info.classList.remove('xxc');};
 
 
   // LOADER ACTION
